@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleccionar Personaje</title>
+    <link rel="stylesheet" href="css/select_character.css">
+</head>
+<body>
+<h1>Seleccionar Personaje</h1>
+<div class="character-selection">
+    <div class="player-selection">
+        <h2>Jugador 1</h2>
+        <div class="carousel" id="carousel1">
+            <div class="character" data-character="Heroe">
+                <img src="assets/catarina.png" alt="Heroe">
+                <p>Heroe</p>
+            </div>
+            <div class="character" data-character="Enemigo">
+                <img src="assets/artorias.png" alt="Enemigo">
+                <p>Enemigo</p>
+            </div>
+        </div>
+        <button class="prev" onclick="prevCharacter('carousel1')">&#10094;</button>
+        <button class="next" onclick="nextCharacter('carousel1')">&#10095;</button>
+    </div>
+
+    <div class="player-selection">
+        <h2>Jugador 2</h2>
+        <div class="carousel" id="carousel2">
+            <div class="character" data-character="Heroe">
+                <img src="assets/catarina.png" alt="Heroe">
+                <p>Heroe</p>
+            </div>
+            <div class="character" data-character="Enemigo">
+                <img src="assets/artorias.png" alt="Enemigo">
+                <p>Enemigo</p>
+            </div>
+        </div>
+        <button class="prev" onclick="prevCharacter('carousel2')">&#10094;</button>
+        <button class="next" onclick="nextCharacter('carousel2')">&#10095;</button>
+    </div>
+</div>
+
+<div class="buttons">
+    <button id="start-game-button" disabled>Iniciar Juego</button>
+    <button id="back-button">Volver</button>
+</div>
+
+<script src="./js/select-character.js"></script>
+</body>
+</html>
+

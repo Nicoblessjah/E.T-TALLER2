@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url("../assets/Mapa.png");
+    background-size: cover;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: rgb(255, 255, 255);
+}
+
+.character-selection {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.player-selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    overflow: hidden;
+    width: 200px; /* Aumentar ancho */
+    height: 250px; /* Aumentar altura */
+    margin: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.7); /* Borde alrededor del carousel */
+    border-radius: 12px; /* Bordes redondeados */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra */
+}
+
+.character {
+    min-width: 200px; /* Aumentar ancho mínimo */
+    transition: transform 0.2s;
+}
+
+.character img {
+    width: 100%;
+    border: 2px solid #fff;
+    border-radius: 8px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    font-size: 18px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    outline: none;
+}
+
+.prev {
+    left: -50px; /* Ajustar posición */
+}
+
+.next {
+    right: -50px; /* Ajustar posición */
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.character img {
+    width: 100%; /* Mantener el ancho al 100% */
+    height: 100%; /* Establecer la altura al 100% */
+    object-fit: cover; /* Ajustar la imagen sin distorsión */
+    border: 2px solid #fff;
+    border-radius: 8px;
+}
+
+
