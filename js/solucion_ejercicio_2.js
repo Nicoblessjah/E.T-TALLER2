@@ -104,8 +104,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const characters = [
-        new Character("Catarina", 1000, 20, "hero", "enemy-health", "enemy-status"),
-        new Character("Artorias", 1000, 20, "enemy", "hero-health", "hero-status"),
+        new Character("Catarina", 1000, 10, "hero", "enemy-health", "enemy-status"),
+        new Character("Artorias", 1000, 10, "enemy", "hero-health", "hero-status"),
     ];
 
     const keys = {};
