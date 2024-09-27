@@ -107,8 +107,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Create characters after DOM is loaded
     const characters = [
-        new Character("Catarina", 1000, 20, "hero", "hero-health", "hero-status"),
-        new Character("Artorias", 1000, 20, "enemy", "enemy-health", "enemy-status"),
+        new Character("Catarina", 1000, 20, "hero", "enemy-health", "enemy-status"),
+        new Character("Artorias", 1000, 20, "enemy", "hero-health", "hero-status"),
         // Add more characters here
     ];
 

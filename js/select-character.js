@@ -3,18 +3,20 @@ let player2Character = null;
 
 function updateStartButton() {
     const startButton = document.getElementById('start-game-button');
-    if (player1Character && player2Character) {
-        startButton.disabled = false;
-    } else {
-        startButton.disabled = true;
-    }
+    startButton.disabled = !(player1Character && player2Character);
 }
 
 function selectCharacter(player, character) {
+    const characterImage = character === "Jake" ? "assets/jake/jake.png" : "assets/rigby/rigby.png";
+
     if (player === 1) {
-        player1Character = character === "Heroe" ? "catarina" : "artorias"; // Actualiza los nombres
+        player1Character = character === "Jake" ? "jake" : "rigby";
+        document.getElementById('selected-character1').src = characterImage; // Update display for player 1
+        document.getElementById('selected-character1').style.display = 'block'; // Show the image
     } else {
-        player2Character = character === "Heroe" ? "catarina" : "artorias"; // Actualiza los nombres
+        player2Character = character === "Jake" ? "jake" : "rigby";
+        document.getElementById('selected-character2').src = characterImage; // Update display for player 2
+        document.getElementById('selected-character2').style.display = 'block'; // Show the image
     }
     updateStartButton();
 }
@@ -43,11 +45,8 @@ function updateSelection(carouselId) {
 
 document.getElementById('start-game-button').addEventListener('click', () => {
     if (player1Character && player2Character) {
-        // Guardar los personajes seleccionados en localStorage en minúsculas
         localStorage.setItem('player1Character', player1Character);
         localStorage.setItem('player2Character', player2Character);
-
-        // Redirigir a la página de juego
         window.location.href = "./index.html";
     }
 });
@@ -55,6 +54,3 @@ document.getElementById('start-game-button').addEventListener('click', () => {
 document.getElementById('back-button').addEventListener('click', () => {
     window.location.href = "./index.html";
 });
-
-
-

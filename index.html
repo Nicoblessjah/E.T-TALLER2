@@ -9,69 +9,32 @@
 </head>
 
 <body>
-<h1>Juego de Pelea</h1>
-<div class="container">
-  <div id="fight-section">
-    <div class="health-bar" id="hero-health-bar">
-      <div class="health" id="hero-health"></div>
-      <p class="status" id="hero-status">Vida: 1000/1000</p>
-    </div>
-
-    <div class="health-bar" id="enemy-health-bar">
-      <div class="health" id="enemy-health"></div>
-      <p class="status" id="enemy-status">Vida: 1000/1000</p>
-    </div>
-
-    <div class="character" id="hero">
-      <img src="" alt="Catarina">
-    </div>
-
-    <div class="character" id="enemy">
-      <img src="" alt="Artorias">
+  <h1>Juego de Pelea</h1>
+  <div class="container">
+    <div id="fight-section">
+      <div class="health-bar" id="hero-health-bar">
+        <div class="health" id="hero-health"></div>
+        <p class="status" id="hero-status">Vida: 1000/1000</p>
+      </div>
+      <div class="health-bar" id="enemy-health-bar">
+        <div class="health" id="enemy-health"></div>
+        <p class="status" id="enemy-status">Vida: 1000/1000</p>
+      </div>
+      <div class="character" id="hero">
+        <canvas id="hero-canvas" width="64" height="64"></canvas>
+      </div>
+      <div class="character" id="enemy">
+        <canvas id="enemy-canvas" width="64" height="64"></canvas>
+      </div>
     </div>
   </div>
-</div>
-<div class="buttons">
-  <button id="exit-button">Salir</button>
-  <a href="select_character.html" id="change-character-button">Cambiar Personaje</a>
-</div>
-
-<script src="./js/solucion_ejercicio_2.js"></script>
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const player1Character = localStorage.getItem('player1Character');
-    const player2Character = localStorage.getItem('player2Character');
-
-    console.log('Jugador 1 seleccionó:', player1Character);
-    console.log('Jugador 2 seleccionó:', player2Character);
-
-    if (player1Character) {
-      const heroImage = document.querySelector('#hero img');
-      heroImage.src = `./assets/${player1Character}.png`; // Cambiar a nombres correctos
-      heroImage.alt = player1Character;
-      console.log('Hero Image src:', heroImage.src);
-    }
-
-    if (player2Character) {
-      const enemyImage = document.querySelector('#enemy img');
-      enemyImage.src = `./assets/${player2Character}.png`; // Cambiar a nombres correctos
-      enemyImage.alt = player2Character;
-      console.log('Enemy Image src:', enemyImage.src);
-    }
-  });
-
-  document.getElementById('exit-button').addEventListener('click', () => {
-    window.location.href = "index.html";
-  });
-</script>
+  <div class="buttons">
+    <button id="exit-button">Salir</button>
+    <a href="select_character.html" id="change-character-button">Cambiar Personaje</a>
+  </div>
+  <script src="./js/solucion_ejercicio_2.js"></script>
+  <script src="./js/index.js"></script>
+  <script src="./js/sprite.js"></script>
 </body>
 
 </html>
-
-
-
-
-
-
-
-
