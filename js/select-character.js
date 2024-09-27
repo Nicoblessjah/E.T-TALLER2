@@ -7,16 +7,16 @@ function updateStartButton() {
 }
 
 function selectCharacter(player, character) {
-    const characterImage = `assets/${character.toLowerCase()}/${character.toLowerCase()}.png`;
+    const characterImage = `./assets/${character.toLowerCase()}/${character.toLowerCase()}.png`;
 
     if (player === 1) {
         player1Character = character.toLowerCase();
-        document.getElementById('selected-character1').src = characterImage; // Update display for player 1
-        document.getElementById('selected-character1').style.display = 'block'; // Show the image
+        document.getElementById('selected-character1').src = characterImage; 
+        console.log(`Jugador 1 ha seleccionado: ${player1Character}`);
     } else {
         player2Character = character.toLowerCase();
-        document.getElementById('selected-character2').src = characterImage; // Update display for player 2
-        document.getElementById('selected-character2').style.display = 'block'; // Show the image
+        document.getElementById('selected-character2').src = characterImage; 
+        console.log(`Jugador 2 ha seleccionado: ${player2Character}`);
     }
     updateStartButton();
 }
@@ -54,4 +54,3 @@ document.getElementById('start-game-button').addEventListener('click', () => {
 document.getElementById('back-button').addEventListener('click', () => {
     window.location.href = "./index.html";
 });
-

@@ -32,24 +32,44 @@ h1 {
 .carousel {
     display: flex;
     overflow: hidden;
-    width: 200px; /* Aumentar ancho */
-    height: 250px; /* Aumentar altura */
+    width: 200px;
+    height: 250px; 
     margin: 10px;
-    border: 2px solid rgba(255, 255, 255, 0.7); /* Borde alrededor del carousel */
-    border-radius: 12px; /* Bordes redondeados */
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    border: 2px solid rgba(255, 255, 255, 0.7);
+    border-radius: 12px; 
+    background-color: rgba(0, 0, 0, 0.5); 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra */
 }
 
 .character {
-    min-width: 200px; /* Aumentar ancho mínimo */
+    width: 200px; 
+    height: 250px; 
+    margin: 10px;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: 400px;
     transition: transform 0.2s;
 }
 
-.character img {
-    width: 100%;
-    border: 2px solid #fff;
-    border-radius: 8px;
+/* Estilo para cada personaje */
+.character.finn {
+    background-image: url('../assets/finn/fin.png');
+    background-position: 1 1; /* Cambiar para mostrar la acción deseada */
+}
+
+.character.mordecai {
+    background-image: url('../assets/mordecai/mordecai.png');
+    background-position: 0 0; 
+}
+
+.character.rigby {
+    background-image: url('../assets/rigby/rigby.png');
+    background-position: 0 0; 
+}
+
+.character.jake {
+    background-image: url('../assets/jake/jake.png');
+    background-position: 0 0;
 }
 
 .prev, .next {
@@ -67,11 +87,11 @@ h1 {
 }
 
 .prev {
-    left: -50px; /* Ajustar posición */
+    left: -50px;
 }
 
 .next {
-    right: -50px; /* Ajustar posición */
+    right: -50px; 
 }
 
 .buttons {
@@ -82,14 +102,23 @@ button {
     padding: 10px 20px;
     margin: 0 10px;
     font-size: 16px;
-    cursor: pointer;
-}
-.character img {
-    width: 100%; /* Mantener el ancho al 100% */
-    height: 100%; /* Establecer la altura al 100% */
-    object-fit: cover; /* Ajustar la imagen sin distorsión */
-    border: 2px solid #fff;
-    border-radius: 8px;
 }
 
+.selected-character {
+    width: 150px; 
+    height: 150px; 
+    background-repeat: no-repeat;
+    display: none;
+    margin-top: 10px;
+    position: relative;
+}
 
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+}

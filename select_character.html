@@ -4,66 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seleccionar Personaje</title>
-    <link rel="stylesheet" href="css/select_character.css">
+    <link rel="stylesheet" href="./css/select_character.css">
 </head>
 <body>
-<h1>Seleccionar Personaje</h1>
-<div class="character-selection">
-    <div class="player-selection">
-        <h2>Jugador 1</h2>
-        <div class="carousel" id="carousel1">
-            <div class="character" data-character="Finn">
-                <img src="assets/finn/finnselect.png" alt="Finn">
-                <p>Finn</p>
+    <h1>Seleccionar Personaje</h1>
+    <div class="character-selection">
+        <div class="player-selection">
+            <h2>Jugador 1</h2>
+            <div class="carousel" id="carousel1">
+                <div class="character" data-character="Finn" onclick="selectCharacter(1, 'Finn')">
+                    <img src="./assets/finn/finn.png" alt="Finn">
+                    <p>Finn</p>
+                </div>
+                <div class="character" data-character="Mordecai" onclick="selectCharacter(1, 'Mordecai')">
+                    <img src="./assets/mordecai/mordecai.png" alt="Mordecai">
+                    <p>Mordecai</p>
+                </div>
+                <div class="character" data-character="Rigby" onclick="selectCharacter(1, 'Rigby')">
+                    <img src="./assets/rigby/rigby.png" alt="Rigby">
+                    <p>Rigby</p>
+                </div>
+                <div class="character" data-character="Jake" onclick="selectCharacter(1, 'Jake')">
+                    <img src="./assets/jake/jake.png" alt="Jake">
+                    <p>Jake</p>
+                </div>
             </div>
-            <div class="character" data-character="Mordecai">
-                <img src="assets/mordecai/mordecaiselect.png" alt="Mordecai">
-                <p>Mordecai</p>
-            </div>
-            <div class="character" data-character="Rigby">
-                <img src="assets/rigby/rigbyselect.png" alt="Rigby">
-                <p>Rigby</p>
-            </div>
-            <div class="character" data-character="Jake">
-                <img src="assets/jake/jakeselect.png" alt="Jake">
-                <p>Jake</p>
-            </div>
+            <button class="prev" onclick="prevCharacter('carousel1')">&#10094;</button>
+            <button class="next" onclick="nextCharacter('carousel1')">&#10095;</button>
+            <div id="selected-character1" class="selected-character"></div>
         </div>
-        <button class="prev" onclick="prevCharacter('carousel1')">&#10094;</button>
-        <button class="next" onclick="nextCharacter('carousel1')">&#10095;</button>
-    </div>
-
-    <div class="player-selection">
-        <h2>Jugador 2</h2>
-        <div class="carousel" id="carousel2">
-            <div class="character" data-character="Finn">
-                <img src="assets/finn/finnselect.png" alt="Finn">
-                <p>Finn</p>
+    
+        <div class="player-selection">
+            <h2>Jugador 2</h2>
+            <div class="carousel" id="carousel2">
+                <div class="character" data-character="Finn" onclick="selectCharacter(2, 'Finn')">
+                    <img src="./assets/finn/finn.png" alt="Finn">
+                    <p>Finn</p>
+                </div>
+                <div class="character" data-character="Mordecai" onclick="selectCharacter(2, 'Mordecai')">
+                    <img src="./assets/mordecai/mordecai.png" alt="Mordecai">
+                    <p>Mordecai</p>
+                </div>
+                <div class="character" data-character="Rigby" onclick="selectCharacter(2, 'Rigby')">
+                    <img src="./assets/rigby/rigby.png" alt="Rigby">
+                    <p>Rigby</p>
+                </div>
+                <div class="character" data-character="Jake" onclick="selectCharacter(2, 'Jake')">
+                    <img src="./assets/jake/jake.png" alt="Jake">
+                    <p>Jake</p>
+                </div>
             </div>
-            <div class="character" data-character="Mordecai">
-                <img src="assets/mordecai/mordecaiselect.png" alt="Mordecai">
-                <p>Mordecai</p>
-            </div>
-            <div class="character" data-character="Rigby">
-                <img src="assets/rigby/rigbyselect.png" alt="Rigby">
-                <p>Rigby</p>
-            </div>
-            <div class="character" data-character="Jake">
-                <img src="assets/jake/jakeselect.png" alt="Jake">
-                <p>Jake</p>
-            </div>
+            <button class="prev" onclick="prevCharacter('carousel2')">&#10094;</button>
+            <button class="next" onclick="nextCharacter('carousel2')">&#10095;</button>
+            <div id="selected-character2" class="selected-character"></div>
         </div>
-        <button class="prev" onclick="prevCharacter('carousel2')">&#10094;</button>
-        <button class="next" onclick="nextCharacter('carousel2')">&#10095;</button>
     </div>
-</div>
-
-<div class="buttons">
-    <button id="start-game-button" disabled>Iniciar Juego</button>
-    <button id="back-button">Volver</button>
-</div>
-
-<script src="./js/select-character.js"></script>
-
+    
+    <div class="buttons">
+        <button id="start-game-button" disabled>Iniciar Juego</button>
+        <button id="back-button">Volver</button>
+    </div>
+    
+    <script src="./js/select-character.js"></script>
+    <script src="./js/index.js" ></script>
 </body>
 </html>
