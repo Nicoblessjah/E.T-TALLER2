@@ -64,8 +64,16 @@
         <button id="start-game-button" class="btn" disabled>Iniciar Juego</button>
         <button id="back-button" class="btn">Volver</button>
     </div>
-    
+    <audio id="click-sound" src="./assets/boton.mp3"></audio>
+
     <script src="./js/select-character.js"></script>
-    <script src="./js/index.js" ></script>
+    <script src="./js/index.js"></script>
+    <script>
+        // Agregar evento de clic para reproducir el sonido
+        document.getElementById('start-game-button').addEventListener('click', function() {
+            var clickSound = document.getElementById('click-sound');
+            clickSound.play();
+        });
+    </script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 body {
   font-family: Arial, sans-serif;
   text-align: center;
-  background-image: url("../assets/Mapa.png");
+  background-image: url("../assets/background.jpg");
   background-size: cover;
   margin: 0;
   height: 100vh;
@@ -35,7 +35,7 @@ h2 {
   height: 80%;
   border: 1px solid #000;
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 0, 242, 0.8)
 }
 
 .character {
@@ -58,12 +58,14 @@ h2 {
   border: 1px solid #000;
   margin: 5px 2.5%;
   box-sizing: border-box;
+  border-radius: 15px;
 }
 
 .health {
   height: 100%;
   background-color: #4caf50;
   width: 100%;
+  border-radius: 15px;
 }
 
 .status {
