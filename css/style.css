@@ -82,21 +82,29 @@ h2 {
 }
 
 .buttons {
-  margin-top: 20px;
+  position: relative;
+  bottom: 20px;
 }
 
 button {
   padding: 10px 20px;
   margin: 0 10px;
   font-size: 16px;
+  border-radius: 15px;
   cursor: pointer;
+  
+}
+
+.btn-personajes {
+  background-color: #ffffff;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 15px;
+  text-decoration: none;
+
 }
 
 .character canvas {
-    width: 128px;
-    height: 128px;
+  width: 128px;
+  height: 128px;
 }
-
-
-
-
