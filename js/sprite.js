@@ -4,7 +4,7 @@ window.onload = function () {
 
     const spriteSheetHero = new Image();
     spriteSheetHero.src = `./assets/${player1Character}/${player1Character}.png`;
-
+    //revisar en GithubPages
     const spriteSheetEnemy = new Image();
     spriteSheetEnemy.src = `./assets/${player2Character}/${player2Character}.png`;
 
@@ -66,11 +66,11 @@ window.onload = function () {
         switch (event.key) {
             case 'a':
                 isHeroMoving = true;
-                currentHeroFrame = 0;
+                currentHeroFrame = 1;
                 break;
             case 'd':
                 isHeroMoving = true;
-                currentHeroFrame = 1;
+                currentHeroFrame = 0;
                 break;
             case 'w':
                 isHeroMoving = true;
