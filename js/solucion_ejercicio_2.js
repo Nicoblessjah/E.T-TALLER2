@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         move(direction) {
-            const step = 5;
+            const step = 2.5;
             const container = document.querySelector('#fight-section');
             const containerRect = container.getBoundingClientRect();
 
