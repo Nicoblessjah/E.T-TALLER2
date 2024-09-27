@@ -52,5 +52,5 @@ document.getElementById('start-game-button').addEventListener('click', () => {
 });
 
 document.getElementById('back-button').addEventListener('click', () => {
-    window.location.href = "./index.html";
+    window.location.href = "./menu.html";
 });
