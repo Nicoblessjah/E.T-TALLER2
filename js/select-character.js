@@ -7,14 +7,14 @@ function updateStartButton() {
 }
 
 function selectCharacter(player, character) {
-    const characterImage = character === "Jake" ? "assets/jake/jake.png" : "assets/rigby/rigby.png";
+    const characterImage = `assets/${character.toLowerCase()}/${character.toLowerCase()}.png`;
 
     if (player === 1) {
-        player1Character = character === "Jake" ? "jake" : "rigby";
+        player1Character = character.toLowerCase();
         document.getElementById('selected-character1').src = characterImage; // Update display for player 1
         document.getElementById('selected-character1').style.display = 'block'; // Show the image
     } else {
-        player2Character = character === "Jake" ? "jake" : "rigby";
+        player2Character = character.toLowerCase();
         document.getElementById('selected-character2').src = characterImage; // Update display for player 2
         document.getElementById('selected-character2').style.display = 'block'; // Show the image
     }
@@ -54,3 +54,4 @@ document.getElementById('start-game-button').addEventListener('click', () => {
 document.getElementById('back-button').addEventListener('click', () => {
     window.location.href = "./index.html";
 });
+
