@@ -50,26 +50,13 @@ h1 {
     background-size: 400px;
     transition: transform 0.2s;
 }
-
-/* Estilo para cada personaje */
-.character.finn {
-    background-image: url('../assets/finn/fin.png');
-    background-position: 1 1; /* Cambiar para mostrar la acción deseada */
-}
-
-.character.mordecai {
-    background-image: url('../assets/mordecai/mordecai.png');
-    background-position: 0 0; 
-}
-
-.character.rigby {
-    background-image: url('../assets/rigby/rigby.png');
-    background-position: 0 0; 
-}
-
-.character.jake {
-    background-image: url('../assets/jake/jake.png');
-    background-position: 0 0;
+.character img {
+    position: relative;
+    max-width: 90%;
+    margin: 100px;
+    bottom: 90px;
+    right: 100px;
+    object-fit: contain;
 }
 
 .prev, .next {
