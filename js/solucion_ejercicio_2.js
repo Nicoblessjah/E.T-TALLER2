@@ -29,9 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const containerRect = container.getBoundingClientRect();
             const characterRect = characterElement.getBoundingClientRect();
-
-            // Center the character based on its type
-            const positionRatio = this.elementId === "hero" ? 0.2 : 0.8; // Updated IDs to match your HTML
+            const positionRatio = this.elementId === "hero" ? 0.2 : 0.8;
             this.position.top = containerRect.height - characterRect.height;
             this.position.left = containerRect.width * positionRatio - characterRect.width / 2;
         }
@@ -105,17 +103,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // Create characters after DOM is loaded
     const characters = [
         new Character("Catarina", 1000, 20, "hero", "enemy-health", "enemy-status"),
         new Character("Artorias", 1000, 20, "enemy", "hero-health", "hero-status"),
-        // Add more characters here
     ];
 
     const keys = {};
 
     function checkCollision() {
-        const [hero, enemy] = characters; // Modify as needed for multiple characters
+        const [hero, enemy] = characters;
         const heroElement = document.getElementById(hero.elementId).getBoundingClientRect();
         const enemyElement = document.getElementById(enemy.elementId).getBoundingClientRect();
 
@@ -134,7 +130,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function update() {
-        // Move characters based on keys pressed
         characters.forEach(character => {
             if (character.name === "Catarina") {
                 if (keys["a"]) character.move("left");
@@ -146,27 +141,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (keys["ArrowUp"]) character.jump();
             }
 
-            // Apply gravity
             character.applyGravity();
         });
 
         if (keys["Enter"] && checkCollision()) {
-            characters[0].attack(characters[1]); // Catarina attacks Artorias
+            characters[0].attack(characters[1]);
         }
 
         if (keys[" "] && checkCollision()) {
-            characters[1].attack(characters[0]); // Artorias attacks Catarina
+            characters[1].attack(characters[0]);
         }
 
         requestAnimationFrame(update);
     }
 
-    // Exit button
     document.getElementById('exit-button').addEventListener('click', () => {
         window.location.href = "./index.html";
     });
 
-    // Change character button
     document.getElementById('change-character-button').addEventListener('click', () => {
         window.location.href = "./select_character.html";
     });
